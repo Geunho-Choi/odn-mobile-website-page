@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    Sign Up
+{% endblock page_title %}
+
+{% block content %}
+<h1>signup</h1>
+{% include "partials/social_login.html" %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
